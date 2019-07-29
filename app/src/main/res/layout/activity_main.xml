@@ -18,6 +18,7 @@
             android:layout_marginEnd="@dimen/margin_wide"
             android:textAllCaps="false"
             style="@style/WhiteBox"
+            tools:text="adascasc"
             android:id="@+id/box_one_text"
             android:text="@string/box_one"/>
 
