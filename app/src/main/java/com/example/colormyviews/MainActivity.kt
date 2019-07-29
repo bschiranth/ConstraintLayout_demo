@@ -16,8 +16,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setClickListeners() {
-        val boxViews = listOf<View>(box_one_text, box_two_text, box_three_text, box_four_text, box_five_text, constraint_layout)
-        for(boxView in boxViews) {
+        val boxViews = listOf<View>(
+            box_one_text, box_two_text, box_three_text, box_four_text, box_five_text, constraint_layout, red_button, green_button, yellow_button
+        )
+        for (boxView in boxViews) {
             boxView.setOnClickListener {
                 makeColored(it)
             }
@@ -35,6 +37,11 @@ class MainActivity : AppCompatActivity() {
             R.id.box_three_text -> view.setBackgroundResource(android.R.color.holo_green_light)
             R.id.box_four_text -> view.setBackgroundResource(android.R.color.holo_green_dark)
             R.id.box_five_text -> view.setBackgroundResource(android.R.color.holo_green_light)
+
+            //buttons
+            R.id.red_button -> box_three_text.setBackgroundResource(R.color.my_red)
+            R.id.yellow_button -> box_four_text.setBackgroundResource(R.color.my_yellow)
+            R.id.green_button -> box_five_text.setBackgroundResource(R.color.my_green)
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
